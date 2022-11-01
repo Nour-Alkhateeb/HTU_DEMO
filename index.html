@@ -9,23 +9,23 @@
   <title>Frontend Mentor | [Testimonials grid section]</title>
 
   <style>
-       @import url("https://fonts.google.com/specimen/Barlow+Semi+Condensed");
-
+    @import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500&display=swap');
+ 
     *{box-sizing: border-box;
      margin: 0px;
      padding: 0px;}
 
   
-  body{ font-size: 15px ;
-    font-family:"Barlow Semi Condensed" ;  
+  body{ font-size: 13px ; 
+    font-family:"Barlow Semi Condensed", sans-serif ;  
     background-color:hsl(210, 46%, 95%); } 
 
  .container { display: grid;
  gap:20px;
+ width:1440px;
  grid-template-columns:repeat(4,1fr) ;
  grid-template-rows: repeat(2,1fr);
  background-color:hsl(210, 46%, 95%);
- max-width: 1440px;
  margin-top:3em;
  margin-left:14em;
  margin-right:14em;}
@@ -82,15 +82,25 @@ border:2px solid rgb(167, 117, 241) ;}
   flex-direction: column;
 padding-left:15px;}
 
-.who{ display: flex ;}
+.section{ display: flex ;}
 
 .opacity1{opacity:50%;}
 .opacity2{opacity:70%;}
 
+ @media (max-width:375px){
+    body{display: flex; 
+      flex-direction: column;
+    justify-content: center; 
+    align-items: center;
+   height: 100vh;}
+    .container{display: flex;
+      flex-direction: column;
+    width:375px;}}
 
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+ 
 
-   /* .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }*/
 
   </style>
 
@@ -100,7 +110,7 @@ padding-left:15px;}
 
 <!--card1-->
 <div class="card">
- <section class="who">
+ <section class="section">
 <img class="img1" src="images/image-daniel.jpg">
 <div class="name"> <small> <b>Daniel Clifford</b></small>
 <small class="opacity1">Verified Graduate</small></div></section><br> 
@@ -120,7 +130,7 @@ fill="#A775F1" fill-rule="nonzero"/></svg>
 
 <!--card2-->
 <div class="card">
-<section class="who">
+<section class="section">
 <img class="img" src="images/image-jonathan.jpg"><div class="name">
 <small><b>Jonathan Walters</b></small>
 <small class="opacity1"> Verified Graduate</small></div>
@@ -131,7 +141,7 @@ for a big company. This was one of the best investments I‚Äôve made in myself. ‚
 
 <!--card3-->
 <div class="card">
-<section class="who">
+<section class="section">
 <img  class="img" src="images/image-kira.jpg">
 <div class="name">
 <small><b> Kira Whittle</b></small>
@@ -149,7 +159,7 @@ for a big company. This was one of the best investments I‚Äôve made in myself. ‚
 
 <!--card4-->
 <div class="card">
-<section class="who">
+<section class="section">
 <img class="img" src="images/image-jeanette.jpg">
 <div class="name">
 <small> <b>Jeanette Harmon</b></small>
@@ -161,7 +171,7 @@ for a big company. This was one of the best investments I‚Äôve made in myself. ‚
 
 <!--card5-->
 <div class="card">
-<section class="who">
+<section class="section">
 <img class="img5" src="images/image-patrick.jpg">
 <div class="name">
 <small><b>Patrick Abrams</b></small> 
@@ -176,9 +186,9 @@ an incredible community of smart and amazing people. ‚Äù</small></div>
 </main>
 
   
-  <!--<div class="attribution">
+  <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>-->
+    Coded by <a href="#">Nour alkhateeb</a>.
+  </div>
 </body>
 </html>
